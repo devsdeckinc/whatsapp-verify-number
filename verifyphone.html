@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Phone Number</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      .container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .container label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #333;
+      }
+      .container p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      .container input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .container button {
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        transition: background-color 0.3s;
+      }
+      .container button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label for="phone-number">Enter your phone number:</label>
+      <p>For Multiple Please Enter as Below: +1012345678,+1012345690</p>
+      <input
+        id="phone-number"
+        type="text"
+        placeholder="Enter your phone number"
+      />
+      <button onclick="verifyPhone()">Check Number</button>
+    </div>
+    <script>
+      function verifyPhone() {
+        const phoneNumber = document.getElementById('phone-number').value;
+        window.location.href = `/verify?phone=${encodeURIComponent(phoneNumber)}`;
+      }
+    </script>
+  </body>
+</html>
