@@ -3,7 +3,7 @@ services:
     build: .
     ports:
       - "3000:3000"
-    container_name: two-buttons-app
+    container_name: whatsapp-verify-app
     restart: unless-stopped
     environment:
       - PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
